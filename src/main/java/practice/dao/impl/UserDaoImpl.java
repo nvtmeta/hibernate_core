@@ -26,15 +26,15 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getById(Integer id) {
-      Session session = HibernateUtils.getCurrentSession();
+        Session session = HibernateUtils.getCurrentSession();
 
-      session.beginTransaction();
+        session.beginTransaction();
 
-      User user = session.get(User.class, id);
+        User user = session.get(User.class, id);
 
-      session.getTransaction().commit();
+        session.getTransaction().commit();
 
-      return user;
+        return user;
     }
 
     @Override

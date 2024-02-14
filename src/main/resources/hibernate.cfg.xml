@@ -18,6 +18,9 @@
         <mapping class="fa.training.entities.ClazzDetail"/>
         <mapping class="fa.training.entities.Course"/>
         <mapping class="fa.training.entities.StudentCourse"/>
+        <mapping class="fa.training.entities.Employee"/>
+        <mapping class="fa.training.entities.Department"/>
         <mapping class="practice.entity.User"/>
+        <mapping class="practice.entity.Laptop"/>
     </session-factory>
 </hibernate-configuration>

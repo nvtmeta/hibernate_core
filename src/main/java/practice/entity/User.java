@@ -2,10 +2,9 @@ package practice.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -13,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class User {
 
 
@@ -24,5 +24,13 @@ public class User {
     @Column
     private String name;
 
+
+    @Column
+    private String email;
+
+
+    @Column
+    @OneToMany(mappedBy = "user")
+    private List<Laptop> laptop;
 
 }
